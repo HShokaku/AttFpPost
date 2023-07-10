@@ -1,4 +1,4 @@
-# AttFpPost_trained
+# Post_trained
 A repository for trained AttFpPost to make predictions
 
 ## Supported Predictions
