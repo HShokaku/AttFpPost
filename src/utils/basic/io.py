@@ -228,9 +228,17 @@ def load_checkpoint(path,
 
 
 def select_model(model_type):
-    from src.model.attentivefp_postnet import attentivefpPostNet
-    return attentivefpPostNet
+    if model_type == 'attentivefp':
+        from src.model.attentivefp import attentivefp
+        return attentivefp
+    elif model_type == "attentivefp_postnet":
+        from src.model.attentivefp_postnet import attentivefpPostNet
+        return attentivefpPostNet
 
 def select_args(model_type):
-    from src.config.attentivefp_postnet import attentivefpPostNetArgs
-    return attentivefpPostNetArgs
+    if model_type == 'attentivefp':
+        from src.config.attentivefp import attentivefpArgs
+        return attentivefpArgs
+    elif model_type == 'attentivefp_postnet':
+        from src.config.attentivefp_postnet import attentivefpPostNetArgs
+        return attentivefpPostNetArgs

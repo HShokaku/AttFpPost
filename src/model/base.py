@@ -4,8 +4,9 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 from torch.utils.data import DataLoader
-# from src.utils.basic.logger import Writer
+from src.utils.basic.logger import Writer
 from src.utils.basic.io import save_checkpoint
+from src.utils.model.optimizer import NoamLR
 
 class ModelBase(nn.Module):
 
@@ -17,11 +18,11 @@ class ModelBase(nn.Module):
         # _config is used to reconstruct the model architecture when reload model from the disk
 
         self.save_dir = save_dir
-        # if self.save_dir is not None:
-        #     # self.debug = Writer(os.path.join(self.save_dir, "debug.log"))
-        #     # self.info  = Writer(os.path.join(self.save_dir, "verbose.log"))
-        # else:
-        self.debug = self.info = print
+        if self.save_dir is not None:
+            self.debug = Writer(os.path.join(self.save_dir, "debug.log"))
+            self.info  = Writer(os.path.join(self.save_dir, "verbose.log"))
+        else:
+            self.debug = self.info = print
 
         self._build(config)  # _build function should only be related with the model structure
 
@@ -53,11 +54,11 @@ class ModelBase(nn.Module):
     def reset_save_dir(self, save_dir):
 
         self.save_dir = save_dir
-        # if self.save_dir is not None:
-        #     self.debug = Writer(os.path.join(self.save_dir, "debug.log"))
-        #     self.info  = Writer(os.path.join(self.save_dir, "verbose.log"))
-        # else:
-        self.debug = self.info = print
+        if self.save_dir is not None:
+            self.debug = Writer(os.path.join(self.save_dir, "debug.log"))
+            self.info  = Writer(os.path.join(self.save_dir, "verbose.log"))
+        else:
+            self.debug = self.info = print
 
     @property
     def _model_type(self):
