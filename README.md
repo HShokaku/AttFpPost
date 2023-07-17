@@ -9,6 +9,7 @@ This repository is the offical implementation of Enhancing Uncertainty Estimatio
 ## Setup
 ```bash
 conda create -n postnet python==3.9
+conda activate postnet
 conda install -c conda-forge rdkit
 conda install pytorch==1.9.0 torchvision==0.10.0 torchaudio==0.9.0 cudatoolkit=11.1 -c pytorch -c conda-forge
 conda install -c conda-forge tqdm
