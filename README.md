@@ -1,6 +1,6 @@
-# Enhancing Uncertainty Estimation and Prediction Accuracy in Molecular Property Classification using Posterior Network
+# Reducing Overconfident Errors in Molecular Property Classification using Posterior Network
 
-This repository is the offical implementation of Enhancing Uncertainty Estimation and Prediction Accuracy in Molecular Property Classification using Posterior Network.
+This repository is the offical implementation of Reducing Overconfident Errors in Molecular Property Classification using Posterior Network.
 
 <p align="center">
   <img src="assets/overview.png" /> 
