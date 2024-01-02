@@ -8,6 +8,12 @@ import platform
 from src.config.base import CommonArgs
 from src.utils.model.loss import UCE_loss
 
+'''
+This section of code was adapted from the Chemprop project
+Original Chemprop code is under the MIT License:
+https://github.com/chemprop/chemprop/blob/d2b243939f12e22b3a1d0a4b2d3599852975cf2b/chemprop/args.py
+'''
+
 Metric = Literal['roc-auc', 'prc-auc', 'rmse', 'mae', 'mse', 'r2', 'accuracy', 'cross_entropy', 'binary_cross_entropy', 'EF1']
 
 class attentivefpPostNetArgs(CommonArgs):

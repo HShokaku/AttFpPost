@@ -24,6 +24,11 @@ def Print(string,
     output.flush()
     return time
 
+'''
+This section of code was adapted from the Chemprop project
+Original Chemprop code is under the MIT License:
+https://github.com/chemprop/chemprop/blob/9bc0d0ef483bd6e43ab097bbb5b93a7b065f1fa2/chemprop/utils.py
+'''
 
 def makedirs(path: str,
              isfile: bool = False) -> None:
