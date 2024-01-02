@@ -4,6 +4,12 @@ import torch.distributions as tdist
 import torch.nn as nn
 import torch
 
+'''
+The following code is adapted from the Posterior Network
+Original Posterior Network code is licensed under the Hippocratic License:
+https://github.com/sharpenb/Posterior-Network/blob/18c49e5fe164203cf8c9d69beafe808990dc92bc/src/posterior_networks/NormalizingFlowDensity.py
+'''
+
 class NormalizingFlowDensity(nn.Module):
 
     def __init__(self, dim, flow_length, flow_type='radial_flow', device=None):
