@@ -16,6 +16,13 @@ import numpy as np
 from typing import Iterator
 import threading
 
+
+'''
+Modified from the dgl-lifesci.
+Original dgl-lifesci code is under the Apache 2.0 License
+https://github.com/awslabs/dgl-lifesci/blob/be8bc71d29ecf34a9dab7c7bd47c08f3383d9be0/python/dgllife/utils/mol_to_graph.py
+'''
+
 def featurize_atoms(mol):
     feats = []
     for atom in mol.GetAtoms():
