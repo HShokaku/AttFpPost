@@ -18,6 +18,7 @@ conda install -c dglteam dgl-cuda11.1
 pip install typed-argument-parser
 conda install -c conda-forge mordred
 pip install pyro-ppl
+conda install -c conda-forge gpytorch
 ```
 
 ## Reproducing
