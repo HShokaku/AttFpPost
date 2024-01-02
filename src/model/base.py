@@ -6,7 +6,6 @@ import torch.optim as optim
 from torch.utils.data import DataLoader
 from src.utils.basic.logger import Writer
 from src.utils.basic.io import save_checkpoint
-from src.utils.model.optimizer import NoamLR
 
 class ModelBase(nn.Module):
 
