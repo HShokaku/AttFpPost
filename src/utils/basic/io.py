@@ -105,7 +105,10 @@ def select_model(model_type):
     elif model_type == "attentivefp_postnet":
         from src.model.attentivefp_postnet import attentivefpPostNet
         return attentivefpPostNet
-
+    elif model_type == 'attentivefp_gp':
+        from src.model.attentivefp_gp import attentivefpGP
+        return attentivefpGP
+    
 def select_args(model_type):
     if model_type == 'attentivefp':
         from src.config.attentivefp import attentivefpArgs
@@ -113,3 +116,6 @@ def select_args(model_type):
     elif model_type == 'attentivefp_postnet':
         from src.config.attentivefp_postnet import attentivefpPostNetArgs
         return attentivefpPostNetArgs
+    elif model_type == 'attentivefp_gp':
+        from src.config.attentivefp_gp import attentivefpGPArgs
+        return attentivefpGPArgs
