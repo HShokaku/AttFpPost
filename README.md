@@ -32,8 +32,7 @@ We provide the trained model checkpoints in the `trained_model` folder. You can 
 -   CYP2C9: Whether to inhibit CYP2C9
 -   CYP3A4: Whether to inhibit CYP3A4
 -   Pgp-inhibitor:  Whether to inhibit P-gp
-### Future Plans
--   Pgp-substrate:  Whether it is a P-gp substrate
+
 ### Usage
 open `single_molecule_prediction.ipynb` 
 ```
@@ -42,3 +41,5 @@ task_name = 'Pgp-inhibitor' # choose your prediction task
 
 single_molecule_prediction(smiles, task_name)
 ```
+### Acknowledgements
+This repository includes code that is modified from [Chemprop](https://github.com/chemprop/chemprop). We would like to acknowledge the developers of Chemprop for their valuable contributions to this field.
